@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: padding-box;
+}
+body {
+	background-color: #EAE2B7;
+}
+html {
+	font-size: 62.5%;
+	font-family: "Ubuntu", sans-serif;
+}
+.form {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 8rem;
+}
+@keyframes start {
+	from {
+		opacity: 0;
+		transform: translateX(-20%);
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.form form {
+	position: relative;
+	animation: start .7s ease-in-out;
+	background-color: #FCBF49;
+	box-shadow: 10px -8px 2px #003049;
+	opacity: .8;
+	width: min-content;
+	height: 40vh;
+	padding: 20px 60px 0 60px;
+	color: #f72585;
+}
+.title {
+	background: -webkit-linear-gradient(-45deg, #00bbf9, #9b5de5);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 3.5rem;
+	text-align: center;
+	padding-bottom: 3rem;
+	text-decoration: blink;
+}
+#label {
+	font-size: 1.8rem;
+	padding: 3px; 
+}
+.input input {
+	border-radius: 10px 20px 20px 15px;
+	padding: 4px;
+	outline: none;
+	border-color: transparent;
+	transition: border .3s;
+}
+.input input:hover:nth-child(n+2){
+	border: 2px solid #cdb4db;
+	background-color: #fefae0;
+}
+::placeholder {
+	padding: 2px;
+	color: #252525;
+}
+.input input:focus::placeholder{
+	color:transparent;
+}
+.input {
+	padding-bottom: 1.2rem;
+}
+
+.enviar {
+	padding: 2rem 0;
+}
+.enviar input{
+	position: relative;
+	border-radius: 50px 50px;
+	font-size: 1.6rem;
+	text-align: center;
+	margin-left: 15px;
+	color: #fff;
+	background-color:#2a9d8f;
+	width: 50%;
+	left: 2.5rem;
+	border: none;
+}
+.enviar input:hover {
+	border-style: none;
+	animation: expandir .2s ease-in-out forwards;
+}
+@keyframes expandir {
+	to {
+		width: 80%;
+		left: 0%;
+		color: #fff;
+		background-color:#2a9d8f;
+	}
+}
+
+@media (max-width: 480px) {
+	.form form {
+		height: 50vh;
+		padding: 60px 60px;
+	}
+	.enviar input {
+	transform: scale(1.2);
+	position: relative;
+	border-radius: 50px 50px;
+	font-size: 1.6rem;
+	text-align: center;
+	margin: 40px 15px 0 15px;
+	color: #fff;
+	background-color:#2a9d8f;
+	width: 50%;
+	left: 2.5rem;
+	border: none;
+	}
+	.input {
+	border-radius: 10px 20px 20px 15px;
+	padding: 0px 15px 15px 20px;
+	outline: none;
+	border-color: transparent;
+	transition: border .3s;
+	}
+}
