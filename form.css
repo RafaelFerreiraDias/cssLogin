@@ -68,6 +68,7 @@ html {
 ::placeholder {
 	padding: 2px;
 	color: #252525;
+	transition-duration: .3s; 
 }
 .input input:focus::placeholder{
 	color:transparent;
@@ -89,25 +90,39 @@ html {
 	background-color:#2a9d8f;
 	width: 50%;
 	left: 2.5rem;
+	color: #fff;
 	border: none;
-}
-.enviar input:hover {
 	border-style: none;
-	animation: expandir .2s ease-in-out forwards;
+	cursor: pointer;
+	box-shadow: 2px 5px 1px #252525;
 }
-@keyframes expandir {
-	to {
+.enviar #enviar:hover {
+	animation: expandir .3s ease-in-out forwards;
+}
+.enviar #enviar:not(:hover) {
+		animation: back .5s ease-in-out forwards;
+	}
+@keyframes back {
+	from {
 		width: 80%;
 		left: 0%;
-		color: #fff;
-		background-color:#2a9d8f;
+	}
+	to {
+		width: 50%;
+		left: 2.5rem;
+	}
+}
+@keyframes expandir {
+	to{
+		width: 80%;
+		left: 0%;	
 	}
 }
 
 @media (max-width: 480px) {
 	.form form {
 		height: 50vh;
-		padding: 60px 60px;
+		padding: 40px;
 	}
 	.enviar input {
 	transform: scale(1.2);
