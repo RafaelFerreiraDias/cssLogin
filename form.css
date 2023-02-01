@@ -34,12 +34,13 @@ html {
 	position: relative;
 	animation: start .7s ease-in-out;
 	background-color: #FCBF49;
-	box-shadow: 10px -8px 2px #003049;
+	box-shadow: 8px -5px 1px #003049;
 	opacity: .8;
 	width: min-content;
 	height: 40vh;
 	padding: 20px 60px 0 60px;
 	color: #f72585;
+	border-radius: 20px;
 }
 .title {
 	background: -webkit-linear-gradient(-45deg, #00bbf9, #9b5de5);
@@ -58,7 +59,7 @@ html {
 	border-radius: 10px 20px 20px 15px;
 	padding: 4px;
 	outline: none;
-	border-color: transparent;
+	border-style: none;
 	transition: border .3s;
 }
 .input input:hover:nth-child(n+2){
@@ -119,29 +120,29 @@ html {
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width:360px){
 	.form form {
-		height: 50vh;
-		padding: 40px;
-	}
-	.enviar input {
-	transform: scale(1.2);
-	position: relative;
-	border-radius: 50px 50px;
-	font-size: 1.6rem;
-	text-align: center;
-	margin: 40px 15px 0 15px;
-	color: #fff;
-	background-color:#2a9d8f;
-	width: 50%;
-	left: 2.5rem;
-	border: none;
-	}
-	.input {
-	border-radius: 10px 20px 20px 15px;
-	padding: 0px 15px 15px 20px;
-	outline: none;
-	border-color: transparent;
-	transition: border .3s;
-	}
+			height: 30vh;
+			width: auto;
+			padding: 40px;
+			align-items: center;
+			border-radius: 50px;
+			box-shadow: 10px 10px #252525;
+		}
+		.title {
+			padding-bottom: 20px;
+		}
+		.input label {
+			display: ;
+		}
+		.input {
+			margin-bottom: 5px;
+		}
+		.input #enviar {
+			margin-left: 30px;
+		}
+		.input input:hover:nth-child(n+2){
+		border: 2px solid #cdb4db;
+		background-color: #fefae0;
+}
 }
