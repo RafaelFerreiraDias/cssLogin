@@ -36,7 +36,7 @@ html {
 	background-color: #FCBF49;
 	box-shadow: 8px -5px 1px #003049;
 	opacity: .8;
-	width: min-content;
+	width: 21rem;
 	height: 40vh;
 	padding: 20px 60px 0 60px;
 	color: #f72585;
@@ -51,8 +51,8 @@ html {
 	padding-bottom: 3rem;
 	text-decoration: blink;
 }
-#label {
-	font-size: 1.8rem;
+form #label {
+	font-size: 2rem;
 	padding: 3px; 
 }
 .input input {
@@ -60,11 +60,7 @@ html {
 	padding: 4px;
 	outline: none;
 	border-style: none;
-	transition: border .3s;
-}
-.input input:hover:nth-child(n+2){
-	border: 2px solid #cdb4db;
-	background-color: #fefae0;
+	transition: border .2s;
 }
 ::placeholder {
 	padding: 2px;
@@ -74,12 +70,12 @@ html {
 .input input:focus::placeholder{
 	color:transparent;
 }
-.input {
-	padding-bottom: 1.2rem;
+.input:nth-child(n+2) {
+	padding: 10px;
 }
-
-.enviar {
-	padding: 2rem 0;
+.input input:hover:nth-child(n+2){
+	border: 2px solid #cdb4db;
+	background-color: #fefae0;
 }
 .enviar input{
 	position: relative;
